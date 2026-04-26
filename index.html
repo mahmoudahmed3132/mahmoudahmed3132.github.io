@@ -3,11 +3,10 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="build-id" content="2026-04-26-1"/>
-<title>Mahmoud H. | Security Engineer</title>
+<title>Mahmoud Halim | Security Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Lato:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
 :root {
   --bg: #ffffff;
@@ -59,7 +58,7 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'Lato', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-size: 15px;
   line-height: 1.65;
   overflow-x: hidden;
@@ -112,12 +111,11 @@ nav .inner {
   height: 64px; display: flex; align-items: center; justify-content: space-between;
 }
 .nav-brand { display: flex; align-items: center; gap: 10px; }
-.nav-name-short {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  color: var(--text);
+.nav-initials {
+  width: 34px; height: 34px; background: var(--accent); color: #fff;
+  border-radius: 8px; display: flex; align-items: center; justify-content: center;
+  font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700;
+  letter-spacing: 0.08em;
 }
 .nav-links { display: flex; gap: 4px; list-style: none; }
 .nav-links a {
@@ -197,14 +195,14 @@ nav .inner {
 }
 @keyframes blink { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.75)} }
 .hero h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: clamp(48px,5.5vw,72px); font-weight: 800;
   line-height: 1.05; letter-spacing: -0.02em;
   color: var(--accent); margin-bottom: 8px;
 }
 .hero h1 em { font-style: normal; color: var(--teal); }
 .hero-role {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 13px; color: var(--text-muted);
   letter-spacing: 0.04em; margin-bottom: 18px;
   min-height: 22px;
@@ -282,7 +280,7 @@ nav .inner {
   z-index: 1;
 }
 .card-title {
-  font-family: 'Roboto Mono', monospace; font-size: 11px;
+  font-family: 'IBM Plex Mono', monospace; font-size: 11px;
   font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--text-faint); margin-bottom: 24px;
 }
@@ -304,19 +302,19 @@ nav .inner {
   opacity: 0.35;
 }
 .stat-num {
-  font-family: 'Montserrat', sans-serif; font-size: 30px;
+  font-family: 'Inter', sans-serif; font-size: 30px;
   font-weight: 700; color: var(--accent); line-height: 1; margin-bottom: 4px;
   font-variant-numeric: tabular-nums;
 }
 .stat-label { font-size: 11.5px; color: var(--text-muted); font-weight: 500; }
 .card-divider { height: 1px; background: var(--border); margin-bottom: 20px; }
 .card-sub {
-  font-family: 'Roboto Mono', monospace; font-size: 11px;
+  font-family: 'IBM Plex Mono', monospace; font-size: 11px;
   letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 12px;
 }
 .cert-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .cert-tag {
-  font-family: 'Roboto Mono', monospace; font-size: 10.5px;
+  font-family: 'IBM Plex Mono', monospace; font-size: 10.5px;
   padding: 4px 10px; border-radius: 5px;
   border: 1px solid var(--border2); color: var(--text-mid); background: var(--bg); font-weight: 500;
 }
@@ -342,7 +340,7 @@ nav .inner {
   gap: 12px;
   border-bottom: 1px solid var(--border);
   padding: 8px 12px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 10.5px;
   color: var(--text-faint);
   text-transform: uppercase;
@@ -359,7 +357,7 @@ nav .inner {
 .console-line {
   display: flex;
   gap: 8px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 11px;
   color: var(--text-muted);
   line-height: 1.55;
@@ -373,12 +371,12 @@ section { padding: 88px 0; }
 section + section { border-top: 1px solid var(--border); }
 .bg-alt { background: var(--bg2); }
 .section-kicker {
-  font-family: 'Roboto Mono', monospace; font-size: 11px;
+  font-family: 'IBM Plex Mono', monospace; font-size: 11px;
   font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--teal); margin-bottom: 8px; text-align: center;
 }
 .section-title {
-  font-family: 'Montserrat', sans-serif; font-size: 32px;
+  font-family: 'Inter', sans-serif; font-size: 32px;
   font-weight: 700; color: var(--accent); letter-spacing: -0.02em;
   line-height: 1.15; margin-bottom: 52px; text-align: center;
 }
@@ -445,14 +443,14 @@ section + section { border-top: 1px solid var(--border); }
   background: #0d1b2a;
   color: #ffffff;
   padding: 0;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-weight: 700;
   font-size: 12px;
   letter-spacing: 0.08em;
   border-color: #10243a;
   box-shadow: none;
 }
-.job-role { font-family: 'Montserrat', sans-serif; font-size: 19px; font-weight: 800; color: var(--accent); margin-bottom: 4px; }
+.job-role { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
 .job-company a {
   font-size: 13.5px; font-weight: 600; color: var(--teal);
   text-decoration: none; border-bottom: 1px dashed var(--teal-mid);
@@ -460,7 +458,7 @@ section + section { border-top: 1px solid var(--border); }
 }
 .job-company a:hover { color: var(--accent); border-bottom-style: solid; border-color: var(--accent); }
 .job-date {
-  font-family: 'Roboto Mono', monospace; font-size: 11px;
+  font-family: 'IBM Plex Mono', monospace; font-size: 11px;
   color: var(--text-faint); white-space: nowrap;
   background: var(--bg2); border: 1px solid var(--border);
   padding: 5px 12px; border-radius: 6px;
@@ -468,7 +466,7 @@ section + section { border-top: 1px solid var(--border); }
 }
 .job-stack { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
 .stack-tag {
-  font-family: 'Roboto Mono', monospace; font-size: 10.5px;
+  font-family: 'IBM Plex Mono', monospace; font-size: 10.5px;
   padding: 3px 9px; border-radius: 4px;
   background: var(--bg3); color: var(--text-mid);
   border: 1px solid var(--border); font-weight: 500;
@@ -506,12 +504,12 @@ section + section { border-top: 1px solid var(--border); }
   width: 38px; height: 38px; border-radius: 9px;
   background: var(--teal-light); border: 1px solid var(--teal-mid);
   display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0; font-family: 'Roboto Mono', monospace;
+  flex-shrink: 0; font-family: 'IBM Plex Mono', monospace;
   font-size: 10px; font-weight: 700; letter-spacing: 0.03em;
   color: var(--teal);
 }
 .skill-name { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
-.skill-sub { font-family: 'Roboto Mono', monospace; font-size: 11px; color: var(--text-faint); }
+.skill-sub { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--text-faint); }
 
 /* CERTS */
 .certs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 12px; }
@@ -567,7 +565,7 @@ section + section { border-top: 1px solid var(--border); }
 .cert-badge {
   width: 42px; height: 42px; border-radius: 10px; background: var(--accent); color: #fff;
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Roboto Mono', monospace; font-size: 9.5px;
+  font-family: 'IBM Plex Mono', monospace; font-size: 9.5px;
   font-weight: 500; flex-shrink: 0; text-align: center; line-height: 1.25;
 }
 .cert-card .vendor-logo { width: 42px; height: 42px; padding: 6px; }
@@ -593,12 +591,12 @@ section + section { border-top: 1px solid var(--border); }
   height: 100%;
   object-fit: contain;
 }
-.edu-degree { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 700; color: var(--accent); margin-bottom: 6px; line-height: 1.2; }
+.edu-degree { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; color: var(--accent); margin-bottom: 6px; line-height: 1.2; }
 .edu-school { font-size: 14px; color: var(--teal); font-weight: 600; margin-bottom: 14px; }
 .edu-meta { display: flex; gap: 20px; flex-wrap: wrap; }
 .edu-chip {
   display: flex; align-items: center; gap: 6px;
-  font-family: 'Roboto Mono', monospace; font-size: 12px; color: var(--text-muted);
+  font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--text-muted);
   font-variant-numeric: tabular-nums;
 }
 
@@ -608,8 +606,8 @@ footer .inner {
   max-width: 1040px; margin: 0 auto; padding: 0 32px;
   display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
 }
-.footer-name { font-family: 'Montserrat', sans-serif; font-size: 16px; color: var(--text); font-weight: 700; }
-.footer-copy { font-family: 'Roboto Mono', monospace; font-size: 11px; letter-spacing: 0.06em; font-variant-numeric: tabular-nums; }
+.footer-name { font-family: 'Inter', sans-serif; font-size: 16px; color: var(--text); font-weight: 700; }
+.footer-copy { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; font-variant-numeric: tabular-nums; }
 
 /* TOAST */
 #toast {
@@ -662,7 +660,7 @@ footer .inner {
 <nav id="navbar">
   <div class="inner">
     <div class="nav-brand">
-      <span class="nav-name-short">Mahmoud H.</span>
+      <div class="nav-initials">MH</div>
     </div>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
@@ -696,7 +694,7 @@ footer .inner {
   <div class="hero-dots"></div>
   <div class="inner">
     <div class="hero-left">
-      <h1>Mahmoud<br/><em>H.</em></h1>
+      <h1>M.<br/><em>Halim</em></h1>
       <div class="hero-role"><span id="roleText">Senior Security Engineer</span><span class="role-caret">_</span></div>
       <p class="hero-summary">Security engineer specializing in incident response, detection engineering, and SOC engineering, with hands-on experience tuning SIEM/SOAR/EDR platforms and strengthening enterprise security operations.</p>
       <div class="hero-actions">
@@ -915,7 +913,7 @@ footer .inner {
 
 <footer>
   <div class="inner">
-    <div><div class="footer-name">Mahmoud H.</div><div style="font-size:12px;margin-top:3px;">Cybersecurity Engineer</div></div>
+    <div><div class="footer-name">M. Halim</div><div style="font-size:12px;margin-top:3px;">Cybersecurity Engineer</div></div>
     <div class="footer-copy">© 2026 · CAIRO, EGYPT</div>
   </div>
 </footer>

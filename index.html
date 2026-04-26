@@ -14,16 +14,16 @@
   --bg3: #f2f2ef;
   --border: #e4e4df;
   --border2: #d0d0c8;
-  --accent: #1a1a2e;
-  --teal: #0a6e6e;
-  --teal-light: #e8f4f4;
-  --teal-mid: #c0e0e0;
-  --text: #111118;
-  --text-mid: #3d3d4a;
-  --text-muted: #7a7a8a;
-  --text-faint: #b0b0bc;
-  --shadow: 0 2px 24px rgba(0,0,0,0.07);
-  --shadow-lg: 0 8px 40px rgba(0,0,0,0.1);
+  --accent: #111111;
+  --teal: #111111;
+  --teal-light: #f5f5f5;
+  --teal-mid: #dddddd;
+  --text: #111111;
+  --text-mid: #2f2f2f;
+  --text-muted: #595959;
+  --text-faint: #8a8a8a;
+  --shadow: 0 2px 12px rgba(0,0,0,0.06);
+  --shadow-lg: 0 6px 20px rgba(0,0,0,0.08);
   --radius: 8px;
   --console-bg: rgba(255,255,255,0.82);
   --console-line: rgba(10,110,110,0.12);
@@ -32,19 +32,19 @@
   --danger: #b83232;
 }
 [data-theme="dark"] {
-  --bg: #101218;
-  --bg2: #151922;
-  --bg3: #1e2430;
-  --border: #2a3340;
-  --border2: #3a4656;
-  --accent: #f3f4f8;
-  --teal: #4fd1c5;
-  --teal-light: #132c31;
-  --teal-mid: #24545a;
-  --text: #f6f7fb;
-  --text-mid: #d2d7e3;
-  --text-muted: #a4adbd;
-  --text-faint: #727c8e;
+  --bg: #0f0f0f;
+  --bg2: #171717;
+  --bg3: #1f1f1f;
+  --border: #2f2f2f;
+  --border2: #3f3f3f;
+  --accent: #f5f5f5;
+  --teal: #f5f5f5;
+  --teal-light: #1c1c1c;
+  --teal-mid: #3a3a3a;
+  --text: #f5f5f5;
+  --text-mid: #d2d2d2;
+  --text-muted: #a8a8a8;
+  --text-faint: #7f7f7f;
   --shadow: 0 2px 24px rgba(0,0,0,0.25);
   --shadow-lg: 0 12px 44px rgba(0,0,0,0.35);
   --console-bg: rgba(16,18,24,0.84);
@@ -91,7 +91,7 @@ body {
 /* PROGRESS */
 #progress {
   position: fixed; top: 0; left: 0; height: 3px;
-  background: linear-gradient(90deg, var(--teal), #2dd4bf);
+  background: #111111;
   z-index: 200; width: 0%; transition: width 0.08s linear;
 }
 
@@ -847,7 +847,7 @@ footer .inner {
             <div class="job-heading">
               <img class="company-logo" src="https://www.google.com/s2/favicons?sz=128&amp;domain=limatrix.net" alt="Limatrix logo" loading="lazy"/>
               <div>
-                <div class="job-role">SOC Analyst Tier</div>
+                <div class="job-role">Security Engineer I</div>
                 <div class="job-company"><a href="https://limatrix.net/" target="_blank" rel="noopener">Limatrix INC.</a></div>
               </div>
             </div>
@@ -964,7 +964,7 @@ function setTheme(theme){
       : '<path d="M12 3a6 6 0 0 0 9 7.5A9 9 0 1 1 12 3z"/>';
   }
 }
-setTheme(savedTheme || 'dark');
+setTheme(savedTheme || 'light');
 themeToggle?.addEventListener('click', () => setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
 
 /* ── ROLE ROTATOR ── */

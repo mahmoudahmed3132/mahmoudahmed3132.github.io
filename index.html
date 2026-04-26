@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Mahmoud Halim | Senior Security Engineer</title>
+<title>M. Halim | Security Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
 :root {
   --bg: #ffffff;
@@ -58,7 +58,7 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'Manrope', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-size: 15px;
   line-height: 1.65;
   overflow-x: hidden;
@@ -114,10 +114,9 @@ nav .inner {
 .nav-initials {
   width: 34px; height: 34px; background: var(--accent); color: #fff;
   border-radius: 8px; display: flex; align-items: center; justify-content: center;
-  font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 700;
-  box-shadow: inset 0 0 0 1px rgba(79,209,197,0.22), 0 0 22px rgba(10,110,110,0.12);
+  font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700;
+  letter-spacing: 0.08em;
 }
-.nav-name { font-size: 14px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
 .nav-links { display: flex; gap: 4px; list-style: none; }
 .nav-links a {
   font-size: 13px; font-weight: 500; color: var(--text-muted);
@@ -126,6 +125,14 @@ nav .inner {
 }
 .nav-links a:hover, .nav-links a.active { color: var(--teal); background: var(--teal-light); }
 .nav-actions { display: flex; align-items: center; gap: 10px; }
+.nav-socials { display: flex; align-items: center; gap: 8px; }
+.nav-social {
+  width: 34px; height: 34px; border-radius: 8px;
+  border: 1px solid var(--border); background: var(--bg2); color: var(--text-mid);
+  display: inline-flex; align-items: center; justify-content: center;
+  text-decoration: none; transition: all 0.2s;
+}
+.nav-social:hover { color: var(--accent); border-color: var(--border2); background: var(--teal-light); }
 .icon-btn {
   width: 38px; height: 38px; border-radius: 8px;
   border: 1px solid var(--border); background: var(--bg2);
@@ -133,22 +140,6 @@ nav .inner {
   cursor: pointer; transition: all 0.2s;
 }
 .icon-btn:hover { color: var(--teal); border-color: var(--teal-mid); background: var(--teal-light); transform: translateY(-1px); }
-.nav-cta {
-  font-size: 13px; font-weight: 600; color: #fff; background: var(--accent);
-  border: none; padding: 8px 18px; border-radius: 8px; cursor: pointer;
-  letter-spacing: 0.01em; text-decoration: none;
-  transition: all 0.2s; display: flex; align-items: center; gap: 6px;
-}
-.nav-cta:hover { background: var(--teal); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(10,110,110,0.3); }
-[data-theme="dark"] .nav-cta {
-  color: #101218;
-  background: var(--teal);
-  border: 1px solid var(--teal-mid);
-}
-[data-theme="dark"] .nav-cta:hover {
-  background: #ffffff;
-  color: #101218;
-}
 
 /* HERO */
 .hero {
@@ -158,20 +149,20 @@ nav .inner {
 .hero-bg {
   position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse 60% 50% at 72% 50%, #e8f4f4 0%, transparent 65%),
-    radial-gradient(ellipse 35% 40% at 8% 80%, #ededf8 0%, transparent 60%);
+    radial-gradient(ellipse 60% 50% at 72% 50%, #f4f4f4 0%, transparent 65%),
+    radial-gradient(ellipse 35% 40% at 8% 80%, #f1f1f1 0%, transparent 60%);
   z-index: 0;
 }
 [data-theme="dark"] .hero-bg {
-  background: radial-gradient(ellipse 60% 50% at 72% 50%, rgba(79,209,197,0.13) 0%, transparent 65%),
-              radial-gradient(ellipse 35% 40% at 8% 80%, rgba(92,104,185,0.14) 0%, transparent 60%);
+  background: radial-gradient(ellipse 60% 50% at 72% 50%, rgba(255,255,255,0.06) 0%, transparent 65%),
+              radial-gradient(ellipse 35% 40% at 8% 80%, rgba(255,255,255,0.04) 0%, transparent 60%);
 }
 .hero-dots {
   position: absolute; inset: 0;
   background-image:
-    linear-gradient(90deg, rgba(10,110,110,0.09) 1px, transparent 1px),
-    linear-gradient(rgba(10,110,110,0.09) 1px, transparent 1px),
-    radial-gradient(circle, #d0d0d8 1px, transparent 1px);
+    linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px),
+    linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
+    radial-gradient(circle, #d9d9d9 1px, transparent 1px);
   background-size: 64px 64px, 64px 64px, 32px 32px;
   opacity: 0.18; z-index: 0;
 }
@@ -204,14 +195,14 @@ nav .inner {
 }
 @keyframes blink { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.75)} }
 .hero h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Inter', sans-serif;
   font-size: clamp(48px,5.5vw,72px); font-weight: 800;
   line-height: 1.05; letter-spacing: -0.02em;
   color: var(--accent); margin-bottom: 8px;
 }
 .hero h1 em { font-style: normal; color: var(--teal); }
 .hero-role {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 13px; color: var(--text-muted);
   letter-spacing: 0.04em; margin-bottom: 18px;
   min-height: 22px;
@@ -261,19 +252,6 @@ nav .inner {
   background: #ffffff;
   color: #101218;
 }
-.hero-contacts { display: flex; flex-direction: column; gap: 10px; }
-.contact-row {
-  display: flex; align-items: center; gap: 12px;
-  font-size: 13.5px; color: var(--text-mid); text-decoration: none; transition: color 0.2s;
-}
-.contact-row:hover { color: var(--teal); }
-.contact-icon {
-  width: 32px; height: 32px; background: var(--bg3);
-  border: 1px solid var(--border); border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0; transition: all 0.2s; color: var(--text-muted);
-}
-.contact-row:hover .contact-icon { background: var(--teal-light); border-color: var(--teal-mid); color: var(--teal); }
 
 /* HERO CARD */
 .hero-card {
@@ -302,7 +280,7 @@ nav .inner {
   z-index: 1;
 }
 .card-title {
-  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  font-family: 'IBM Plex Mono', monospace; font-size: 11px;
   font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--text-faint); margin-bottom: 24px;
 }
@@ -324,18 +302,19 @@ nav .inner {
   opacity: 0.35;
 }
 .stat-num {
-  font-family: 'Playfair Display', serif; font-size: 30px;
+  font-family: 'Inter', sans-serif; font-size: 30px;
   font-weight: 700; color: var(--accent); line-height: 1; margin-bottom: 4px;
+  font-variant-numeric: tabular-nums;
 }
 .stat-label { font-size: 11.5px; color: var(--text-muted); font-weight: 500; }
 .card-divider { height: 1px; background: var(--border); margin-bottom: 20px; }
 .card-sub {
-  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  font-family: 'IBM Plex Mono', monospace; font-size: 11px;
   letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 12px;
 }
 .cert-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .cert-tag {
-  font-family: 'JetBrains Mono', monospace; font-size: 10.5px;
+  font-family: 'IBM Plex Mono', monospace; font-size: 10.5px;
   padding: 4px 10px; border-radius: 5px;
   border: 1px solid var(--border2); color: var(--text-mid); background: var(--bg); font-weight: 500;
 }
@@ -361,7 +340,7 @@ nav .inner {
   gap: 12px;
   border-bottom: 1px solid var(--border);
   padding: 8px 12px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 10.5px;
   color: var(--text-faint);
   text-transform: uppercase;
@@ -378,7 +357,7 @@ nav .inner {
 .console-line {
   display: flex;
   gap: 8px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 11px;
   color: var(--text-muted);
   line-height: 1.55;
@@ -392,21 +371,21 @@ section { padding: 88px 0; }
 section + section { border-top: 1px solid var(--border); }
 .bg-alt { background: var(--bg2); }
 .section-kicker {
-  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  font-family: 'IBM Plex Mono', monospace; font-size: 11px;
   font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--teal); margin-bottom: 8px;
+  color: var(--teal); margin-bottom: 8px; text-align: center;
 }
 .section-title {
-  font-family: 'Playfair Display', serif; font-size: 32px;
+  font-family: 'Inter', sans-serif; font-size: 32px;
   font-weight: 700; color: var(--accent); letter-spacing: -0.02em;
-  line-height: 1.15; margin-bottom: 52px;
+  line-height: 1.15; margin-bottom: 52px; text-align: center;
 }
 .section-title::after {
   content: '';
   display: block;
   width: 72px;
   height: 2px;
-  margin-top: 14px;
+  margin: 14px auto 0;
   background: linear-gradient(90deg, var(--teal), transparent);
 }
 
@@ -479,14 +458,15 @@ section + section { border-top: 1px solid var(--border); }
 }
 .job-company a:hover { color: var(--accent); border-bottom-style: solid; border-color: var(--accent); }
 .job-date {
-  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  font-family: 'IBM Plex Mono', monospace; font-size: 11px;
   color: var(--text-faint); white-space: nowrap;
   background: var(--bg2); border: 1px solid var(--border);
   padding: 5px 12px; border-radius: 6px;
+  font-variant-numeric: tabular-nums;
 }
 .job-stack { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
 .stack-tag {
-  font-family: 'JetBrains Mono', monospace; font-size: 10.5px;
+  font-family: 'IBM Plex Mono', monospace; font-size: 10.5px;
   padding: 3px 9px; border-radius: 4px;
   background: var(--bg3); color: var(--text-mid);
   border: 1px solid var(--border); font-weight: 500;
@@ -524,12 +504,12 @@ section + section { border-top: 1px solid var(--border); }
   width: 38px; height: 38px; border-radius: 9px;
   background: var(--teal-light); border: 1px solid var(--teal-mid);
   display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0; font-family: 'JetBrains Mono', monospace;
+  flex-shrink: 0; font-family: 'IBM Plex Mono', monospace;
   font-size: 10px; font-weight: 700; letter-spacing: 0.03em;
   color: var(--teal);
 }
 .skill-name { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
-.skill-sub { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-faint); }
+.skill-sub { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--text-faint); }
 
 /* CERTS */
 .certs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 12px; }
@@ -579,13 +559,13 @@ section + section { border-top: 1px solid var(--border); }
 .empty-state.show { display: block; }
 .cert-card.visible { opacity: 1; transform: translateY(0); }
 .cert-card:hover { box-shadow: var(--shadow); border-color: var(--teal-mid); transform: translateY(-2px) !important; }
-.cert-card:focus-visible, .hero-action:focus-visible, .contact-row:focus-visible, .job-company a:focus-visible, .nav-links a:focus-visible, .nav-cta:focus-visible {
+.cert-card:focus-visible, .hero-action:focus-visible, .job-company a:focus-visible, .nav-links a:focus-visible, .nav-social:focus-visible, .icon-btn:focus-visible {
   outline: 3px solid var(--teal-mid); outline-offset: 3px;
 }
 .cert-badge {
   width: 42px; height: 42px; border-radius: 10px; background: var(--accent); color: #fff;
   display: flex; align-items: center; justify-content: center;
-  font-family: 'JetBrains Mono', monospace; font-size: 9.5px;
+  font-family: 'IBM Plex Mono', monospace; font-size: 9.5px;
   font-weight: 500; flex-shrink: 0; text-align: center; line-height: 1.25;
 }
 .cert-card .vendor-logo { width: 42px; height: 42px; padding: 6px; }
@@ -611,22 +591,23 @@ section + section { border-top: 1px solid var(--border); }
   height: 100%;
   object-fit: contain;
 }
-.edu-degree { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--accent); margin-bottom: 6px; line-height: 1.2; }
+.edu-degree { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; color: var(--accent); margin-bottom: 6px; line-height: 1.2; }
 .edu-school { font-size: 14px; color: var(--teal); font-weight: 600; margin-bottom: 14px; }
 .edu-meta { display: flex; gap: 20px; flex-wrap: wrap; }
 .edu-chip {
   display: flex; align-items: center; gap: 6px;
-  font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-muted);
+  font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
 }
 
 /* FOOTER */
-footer { background: var(--accent); color: rgba(255,255,255,0.5); padding: 36px 0; }
+footer { background: var(--bg2); color: var(--text-muted); padding: 36px 0; border-top: 1px solid var(--border); }
 footer .inner {
   max-width: 1040px; margin: 0 auto; padding: 0 32px;
   display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
 }
-.footer-name { font-family: 'Playfair Display', serif; font-size: 16px; color: #fff; font-weight: 700; }
-.footer-copy { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.06em; }
+.footer-name { font-family: 'Inter', sans-serif; font-size: 16px; color: var(--text); font-weight: 700; }
+.footer-copy { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; font-variant-numeric: tabular-nums; }
 
 /* TOAST */
 #toast {
@@ -658,7 +639,8 @@ footer .inner {
 @media(max-width:768px){
   .hero .inner { grid-template-columns: 1fr; }
   .hero-card { display: none; }
-  .nav-links, .nav-cta { display: none; }
+  .nav-links { display: none; }
+  .nav-socials { display: none; }
   .nav-actions { margin-left: auto; }
   .stats-grid { grid-template-columns: 1fr; }
   .certs-grid, .skills-grid { grid-template-columns: 1fr; }
@@ -679,7 +661,6 @@ footer .inner {
   <div class="inner">
     <div class="nav-brand">
       <div class="nav-initials">MH</div>
-      <span class="nav-name">Mahmoud Halim</span>
     </div>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
@@ -689,13 +670,20 @@ footer .inner {
       <li><a href="#education">Education</a></li>
     </ul>
     <div class="nav-actions">
+      <div class="nav-socials" aria-label="Contact links">
+        <a class="nav-social" href="https://www.linkedin.com/in/mahmoudhalim466/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a class="nav-social" href="mailto:Mahmoudhalim466@gmail.com" aria-label="Email">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+        <a class="nav-social" href="tel:+201141383945" aria-label="Phone">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 7.82 2 2 0 015 5.67h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 13.37a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </a>
+      </div>
       <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle theme">
         <svg class="theme-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 7.5A9 9 0 1 1 12 3z"/></svg>
       </button>
-      <a href="mailto:Mahmoudhalim466@gmail.com" class="nav-cta">
-        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        Get in Touch
-      </a>
     </div>
   </div>
 </nav>
@@ -706,7 +694,7 @@ footer .inner {
   <div class="hero-dots"></div>
   <div class="inner">
     <div class="hero-left">
-      <h1>Mahmoud<br/><em>Halim</em></h1>
+      <h1>M.<br/><em>Halim</em></h1>
       <div class="hero-role"><span id="roleText">Senior Security Engineer</span><span class="role-caret">_</span></div>
       <p class="hero-summary">Security engineer specializing in incident response, detection engineering, and SOC engineering, with hands-on experience tuning SIEM/SOAR/EDR platforms and strengthening enterprise security operations.</p>
       <div class="hero-actions">
@@ -717,20 +705,6 @@ footer .inner {
         <a class="hero-action" href="#certs">
           <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
           Certifications
-        </a>
-      </div>
-      <div class="hero-contacts">
-        <a class="contact-row" href="https://www.linkedin.com/in/mahmoudhalim466/" target="_blank" rel="noopener">
-          <div class="contact-icon"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></div>
-          LinkedIn
-        </a>
-        <a class="contact-row" href="mailto:Mahmoudhalim466@gmail.com">
-          <div class="contact-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          Mahmoudhalim466@gmail.com
-        </a>
-        <a class="contact-row" href="tel:+201141383945">
-          <div class="contact-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 7.82 2 2 0 015 5.67h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 13.37a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
-          +201141383945
         </a>
       </div>
     </div>
@@ -939,7 +913,7 @@ footer .inner {
 
 <footer>
   <div class="inner">
-    <div><div class="footer-name">Mahmoud Halim</div><div style="font-size:12px;margin-top:3px;">Cybersecurity Engineer</div></div>
+    <div><div class="footer-name">M. Halim</div><div style="font-size:12px;margin-top:3px;">Cybersecurity Engineer</div></div>
     <div class="footer-copy">© 2026 · CAIRO, EGYPT</div>
   </div>
 </footer>

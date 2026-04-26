@@ -14,16 +14,16 @@
   --bg3: #f2f2ef;
   --border: #e4e4df;
   --border2: #d0d0c8;
-  --accent: #1a1a2e;
-  --teal: #0a6e6e;
-  --teal-light: #e8f4f4;
-  --teal-mid: #c0e0e0;
-  --text: #111118;
-  --text-mid: #3d3d4a;
-  --text-muted: #7a7a8a;
-  --text-faint: #b0b0bc;
-  --shadow: 0 2px 24px rgba(0,0,0,0.07);
-  --shadow-lg: 0 8px 40px rgba(0,0,0,0.1);
+  --accent: #111111;
+  --teal: #111111;
+  --teal-light: #f5f5f5;
+  --teal-mid: #dddddd;
+  --text: #111111;
+  --text-mid: #2f2f2f;
+  --text-muted: #595959;
+  --text-faint: #8a8a8a;
+  --shadow: 0 2px 12px rgba(0,0,0,0.06);
+  --shadow-lg: 0 6px 20px rgba(0,0,0,0.08);
   --radius: 8px;
   --console-bg: rgba(255,255,255,0.82);
   --console-line: rgba(10,110,110,0.12);
@@ -32,19 +32,19 @@
   --danger: #b83232;
 }
 [data-theme="dark"] {
-  --bg: #101218;
-  --bg2: #151922;
-  --bg3: #1e2430;
-  --border: #2a3340;
-  --border2: #3a4656;
-  --accent: #f3f4f8;
-  --teal: #4fd1c5;
-  --teal-light: #132c31;
-  --teal-mid: #24545a;
-  --text: #f6f7fb;
-  --text-mid: #d2d7e3;
-  --text-muted: #a4adbd;
-  --text-faint: #727c8e;
+  --bg: #0f0f0f;
+  --bg2: #171717;
+  --bg3: #1f1f1f;
+  --border: #2f2f2f;
+  --border2: #3f3f3f;
+  --accent: #f5f5f5;
+  --teal: #f5f5f5;
+  --teal-light: #1c1c1c;
+  --teal-mid: #3a3a3a;
+  --text: #f5f5f5;
+  --text-mid: #d2d2d2;
+  --text-muted: #a8a8a8;
+  --text-faint: #7f7f7f;
   --shadow: 0 2px 24px rgba(0,0,0,0.25);
   --shadow-lg: 0 12px 44px rgba(0,0,0,0.35);
   --console-bg: rgba(16,18,24,0.84);
@@ -56,11 +56,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
-  background:
-    linear-gradient(90deg, transparent 31px, var(--console-line) 32px),
-    linear-gradient(transparent 31px, var(--console-line) 32px),
-    var(--bg);
-  background-size: 32px 32px, 32px 32px, auto;
+  background: var(--bg);
   color: var(--text);
   font-family: 'Manrope', sans-serif;
   font-size: 15px;
@@ -76,7 +72,7 @@ body {
   pointer-events: none; z-index: 9999;
   transform: translate(-50%,-50%);
   transition: width 0.25s, height 0.25s, background 0.25s;
-  mix-blend-mode: multiply;
+  mix-blend-mode: normal;
 }
 .cursor-ring {
   position: fixed; width: 36px; height: 36px;
@@ -88,11 +84,14 @@ body {
 }
 .cursor.hover { width: 14px; height: 14px; background: var(--accent); }
 .cursor-ring.hover { width: 54px; height: 54px; opacity: 0.15; }
+@media (max-width: 1024px) {
+  .cursor, .cursor-ring { display: none; }
+}
 
 /* PROGRESS */
 #progress {
   position: fixed; top: 0; left: 0; height: 3px;
-  background: linear-gradient(90deg, var(--teal), #2dd4bf);
+  background: #111111;
   z-index: 200; width: 0%; transition: width 0.08s linear;
 }
 
@@ -104,14 +103,7 @@ nav {
   border-bottom: 1px solid var(--border);
   transition: box-shadow 0.3s;
 }
-[data-theme="dark"] body {
-  background:
-    linear-gradient(90deg, transparent 31px, rgba(79,209,197,0.08) 32px),
-    linear-gradient(transparent 31px, rgba(79,209,197,0.08) 32px),
-    radial-gradient(circle at 75% 10%, rgba(79,209,197,0.1), transparent 28%),
-    var(--bg);
-  background-size: 32px 32px, 32px 32px, auto, auto;
-}
+[data-theme="dark"] body { background: var(--bg); }
 [data-theme="dark"] nav { background: rgba(16,18,24,0.9); }
 nav.scrolled { box-shadow: var(--shadow); }
 nav .inner {
@@ -181,7 +173,7 @@ nav .inner {
     linear-gradient(rgba(10,110,110,0.09) 1px, transparent 1px),
     radial-gradient(circle, #d0d0d8 1px, transparent 1px);
   background-size: 64px 64px, 64px 64px, 32px 32px;
-  opacity: 0.5; z-index: 0;
+  opacity: 0.18; z-index: 0;
 }
 .hero::after {
   content: '';
@@ -189,7 +181,7 @@ nav .inner {
   inset: 0;
   background: linear-gradient(180deg, transparent 0%, rgba(10,110,110,0.045) 50%, transparent 100%);
   transform: translateY(-100%);
-  animation: scan 8s linear infinite;
+  animation: none;
   pointer-events: none;
   z-index: 0;
 }
@@ -286,7 +278,7 @@ nav .inner {
 /* HERO CARD */
 .hero-card {
   background: var(--console-bg); border: 1px solid var(--border);
-  border-radius: 8px; box-shadow: var(--shadow-lg); padding: 32px;
+  border-radius: 8px; box-shadow: var(--shadow); padding: 32px;
   position: relative; overflow: hidden;
   backdrop-filter: blur(18px);
 }
@@ -454,7 +446,7 @@ section + section { border-top: 1px solid var(--border); }
   background: linear-gradient(180deg, var(--teal), transparent);
   opacity: 0.75;
 }
-.job-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); border-color: var(--teal-mid); }
+.job-card:hover { box-shadow: var(--shadow); transform: translateY(-1px); border-color: var(--teal-mid); }
 .job-top {
   display: flex; justify-content: space-between; align-items: flex-start;
   gap: 16px; margin-bottom: 14px; flex-wrap: wrap;
@@ -466,8 +458,18 @@ section + section { border-top: 1px solid var(--border); }
   padding: 7px; flex-shrink: 0; box-shadow: 0 1px 10px rgba(0,0,0,0.04);
 }
 .company-logo.barq-logo {
-  background: #101820;
-  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0d1b2a;
+  color: #ffffff;
+  padding: 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  border-color: #10243a;
+  box-shadow: none;
 }
 .job-role { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
 .job-company a {
@@ -804,7 +806,7 @@ footer .inner {
         <div class="job-card">
           <div class="job-top">
             <div class="job-heading">
-              <img class="company-logo barq-logo" src="barq-systems-icon.svg" alt="BARQ Systems logo" loading="lazy"/>
+              <div class="company-logo barq-logo" aria-label="BARQ Systems logo" role="img">BARQ</div>
               <div>
                 <div class="job-role">Mid-Sr Cyber Defense Engineer</div>
                 <div class="job-company"><a href="https://barqsystems.com/en/homepage" target="_blank" rel="noopener">BARQ Systems</a></div>
@@ -845,7 +847,7 @@ footer .inner {
             <div class="job-heading">
               <img class="company-logo" src="https://www.google.com/s2/favicons?sz=128&amp;domain=limatrix.net" alt="Limatrix logo" loading="lazy"/>
               <div>
-                <div class="job-role">SOC Analyst Tier</div>
+                <div class="job-role">Security Engineer I</div>
                 <div class="job-company"><a href="https://limatrix.net/" target="_blank" rel="noopener">Limatrix INC.</a></div>
               </div>
             </div>
@@ -962,7 +964,7 @@ function setTheme(theme){
       : '<path d="M12 3a6 6 0 0 0 9 7.5A9 9 0 1 1 12 3z"/>';
   }
 }
-setTheme(savedTheme || 'dark');
+setTheme(savedTheme || 'light');
 themeToggle?.addEventListener('click', () => setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
 
 /* ── ROLE ROTATOR ── */
